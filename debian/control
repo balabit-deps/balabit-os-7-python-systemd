@@ -1,0 +1,59 @@
+Source: python-systemd
+Section: python
+Priority: optional
+Maintainer: Debian systemd Maintainers <pkg-systemd-maintainers@lists.alioth.debian.org>
+Uploaders: Michael Biebl <biebl@debian.org>,
+           Martin Pitt <mpitt@debian.org>
+Standards-Version: 4.0.0
+Vcs-Git: https://anonscm.debian.org/git/pkg-systemd/python-systemd.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-systemd/python-systemd.git
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+X-Python3-Version: >=3.1
+Build-Depends: debhelper (>= 10),
+               dh-python,
+               libsystemd-dev,
+               pkg-config,
+               python-all-dev,
+               python3-all-dev
+
+Package: python-systemd
+Section: python
+Priority: optional
+Architecture: linux-any
+Depends: ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Description: Python 2 bindings for systemd
+ This package contains Python 2 bindings for native access to the
+ systemd facilities.
+ .
+ Functionality is separated into a number of modules:
+  * systemd.journal supports sending of structured messages to the
+    journal and reading journal files
+  * systemd.daemon wraps parts of libsystemd useful for writing daemons
+    and socket activation
+  * systemd.id128 provides functions for querying machine and boot
+    identifiers and a list of message identifiers provided by systemd
+  * systemd.login wraps parts of libsystemd used to query logged in
+    users and available seats and machines
+
+Package: python3-systemd
+Section: python
+Priority: optional
+Architecture: linux-any
+Depends: ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Description: Python 3 bindings for systemd
+ This package contains Python 3 bindings for native access to the
+ systemd facilities.
+ .
+ Functionality is separated into a number of modules:
+  * systemd.journal supports sending of structured messages to the
+    journal and reading journal files
+  * systemd.daemon wraps parts of libsystemd useful for writing daemons
+    and socket activation
+  * systemd.id128 provides functions for querying machine and boot
+    identifiers and a list of message identifiers provided by systemd
+  * systemd.login wraps parts of libsystemd used to query logged in
+    users and available seats and machines

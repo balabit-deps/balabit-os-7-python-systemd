@@ -1,0 +1,5 @@
+Test-Command: python3 debian/tests/import.py
+Depends: python3-systemd
+
+Test-Command: python debian/tests/import.py
+Depends: python-systemd
